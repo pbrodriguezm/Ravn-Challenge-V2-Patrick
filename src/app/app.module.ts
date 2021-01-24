@@ -15,6 +15,10 @@ import { PlanetsService } from './services/planets.service';
 import { PeopleService } from './services/people.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//Material
+import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
+import {MatStepperModule} from '@angular/material/stepper';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -25,7 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     HttpLinkModule,
     GraphQLModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    
   ],
   providers: [PlanetsService, PeopleService],
   bootstrap: [AppComponent]

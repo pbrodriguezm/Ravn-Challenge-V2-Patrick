@@ -44,7 +44,7 @@ query planets {
 })
 export class AppComponent implements OnInit {
   title = 'Ravn-Challenge-V2-Patrick';
-
+  panelOpenState = false; 
 
   constructor(
     private apollo: Apollo,

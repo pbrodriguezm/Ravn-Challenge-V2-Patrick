@@ -1,0 +1,33 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+    background-color: #2E2E2E;
+}
+.container{
+    margin: 15px;
+}
+
+
+  .divBody {
+    
+    height: 100%;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .divMaster {
+    
+    width: 98%;
+  }
+
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .centerBannerImg {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
