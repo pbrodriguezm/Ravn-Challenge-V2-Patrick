@@ -26,7 +26,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-#Design
+## Design
+
+
 Prototype and moockup https://www.figma.com/file/zDSqhBJKUJdf81tnfTYVWT/Ravn-Challenge-V2-Patrick?node-id=80%3A718
 Background color: 2E2E2E
 Name	.CSS classes	// Description
