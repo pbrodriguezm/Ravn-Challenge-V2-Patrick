@@ -1,8 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { Apollo } from 'apollo-angular';
+
+import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GraphQLModule } from './graphql.module';
+
+//Services 
+import { PlanetsService } from './services/planets.service';
+import { PeopleService } from './services/people.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -10,9 +21,15 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpLinkModule,
+    GraphQLModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [PlanetsService, PeopleService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+ 
+}
