@@ -18,6 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Material
 import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     GraphQLModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    MatIconModule,
+    MatProgressBarModule
     
   ],
   providers: [PlanetsService, PeopleService],

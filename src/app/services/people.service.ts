@@ -64,6 +64,9 @@ public getPeoplebyBlock(block:any=5) {
         name
         gender
         skinColor
+        birthYear
+        eyeColor
+        created
       }
     }
   }

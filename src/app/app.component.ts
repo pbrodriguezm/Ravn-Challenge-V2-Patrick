@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import gql from 'graphql-tag';
 import { PlanetsService } from './services/planets.service';
 import { PeopleService } from './services/people.service';
+import { Person } from './models/person.model';
 
 
 interface allPlanets {
@@ -45,6 +46,8 @@ query planets {
 export class AppComponent implements OnInit {
   title = 'Ravn-Challenge-V2-Patrick';
   panelOpenState = false; 
+  peoples:Person[]=[];
+  loading:boolean=false;
 
   constructor(
     private apollo: Apollo,
@@ -53,8 +56,8 @@ export class AppComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-    //console.log(this.getPlanets());
-    console.log(this.getAllPeople());
+    this.getAllPeople();
+    this.loading=true;
     
   }
 
@@ -72,8 +75,10 @@ export class AppComponent implements OnInit {
   }
 
   public getAllPeople() {
+    this.loading=true;
     this.peopleService.getPeoplebyBlock(5).subscribe((data) => {
-      console.log(data, data.data);
+      this.peoples=data.data.allPeople.people;
+      this.loading=false;
     });
   }
 
